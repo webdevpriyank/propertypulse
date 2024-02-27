@@ -1,0 +1,26 @@
+'use client'
+import React from 'react'
+import { useRouter, useParams, useSearchParams, usePathname } from 'next/navigation'
+
+const PropertyPage = () => {
+
+  const router = useRouter()
+  const { id } = useParams()
+
+  const searchParams = useSearchParams()
+  const name = searchParams.get('name')
+
+  const pathName = usePathname()
+
+  return (  
+    <div>
+      <h1 className="text-3xl">Property Of ID {id} with Name {name}</h1>
+      <p>{pathName}</p>
+      <button onClick={() => router.push('/')} className='p-2 bg-blue-400'>
+        Go Home
+      </button>
+    </div>
+  )
+}
+
+export default PropertyPage
