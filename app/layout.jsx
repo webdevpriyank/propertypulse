@@ -1,6 +1,7 @@
 import React from 'react'
 import '@/assets/styles/global.css'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const metadata = {
     title: 'Property Pulse | Find Perfect Rental',
@@ -13,7 +14,8 @@ const MainLayout = ({ children }) => {
         <html lang="en">
             <body>
                 <Navbar></Navbar>                
-                {children}
+                    {children}
+                <Footer />
             </body>
         </html>
     )
